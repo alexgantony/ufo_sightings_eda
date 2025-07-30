@@ -1,0 +1,13 @@
+# Raw data files
+data/
+
+# Jupyter notebooks checkpoints
+**/.ipynb_checkpoints/
+
+# VS Code settings
+.vs_code/
+
+# Virtual Enviornments
+.env/
+.venv/
+venv/
