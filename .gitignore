@@ -1,5 +1,7 @@
 # Raw data files
-data/
+data/raw/*
+data/interim/*
+data/processed/*
 
 # Jupyter notebooks checkpoints
 **/.ipynb_checkpoints/
