@@ -92,7 +92,7 @@ processed = 0
 for idx, row in df.loc[need_mask].iterrows():
     lat, lon = row.get("latitude"), row.get("longitude")
 
-    # If coords missing, bucket to ROF and continue
+    # If coords missing, bucket to ROW and continue
     if pd.isna(lat) or pd.isna(lon):
         df.loc[idx, ["results_city", "results_state", "results_country"]] = [
             "",
@@ -148,7 +148,7 @@ for idx, row in df.loc[need_mask].iterrows():
             continue
         except Exception as e:
             last_error = e
-            # Hard fail → bucket to ROF
+            # Hard fail → bucket to ROW
             df.loc[idx, ["results_city", "results_state", "results_country"]] = [
                 "",
                 "",
