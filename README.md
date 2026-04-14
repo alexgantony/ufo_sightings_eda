@@ -207,7 +207,7 @@ ufo_sightings_eda/
 
 1. Clone the repository
 ```bash
-git clone https://github.com/alexgantony/ufo-sightings-eda.git
+git clone https://github.com/alexgantony/ufo_sightings_eda.git
 cd ufo-sightings-eda
 ```
 
@@ -224,8 +224,8 @@ pip install -r requirements.txt
 ```
 
 4. Download the dataset from [Maven Analytics](https://mavenanalytics.io/data-playground/ufo-sightings) and place `ufo_sightings_scrubbed.csv` in `data/raw/`
-5. 
-6. The cleaned dataset already exists in `data/processed/`. To run the EDA:
+
+5. The cleaned dataset already exists in `data/processed/`. To run the EDA:
 
 ```bash
 jupyter notebook notebooks/2_exploratory_analysis.ipynb
