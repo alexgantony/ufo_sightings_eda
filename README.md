@@ -195,8 +195,6 @@ ufo_sightings_eda/
 │   └── plot_config.py
 ├── images/
 │   └── visuals/            # Exported chart images
-├── reports/
-│   └── project_summary_report.md
 ├── requirements.txt
 └── README.md
 ```
