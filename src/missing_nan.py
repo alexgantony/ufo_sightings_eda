@@ -72,6 +72,6 @@ for idx, row in df.loc[need_state_mask].iterrows():
     processed += 1
     time.sleep(1)  # Respect Nominatim 1 req/sec
 
-# Save
+# Final Save
 df.to_csv(r"data\interim\canada_nan_cities_mapped.csv", index=False)
 print("Process completed.")

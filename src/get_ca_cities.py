@@ -6,7 +6,7 @@ from geopy.geocoders import Nominatim
 
 geolocator = Nominatim(user_agent="ca_state_app")
 
-df = pd.read_csv("data\interim\canada_nan_reamining.csv")
+df = pd.read_csv("data/interim/canada_nan_reamining.csv")
 
 results_city = []
 results_state = []

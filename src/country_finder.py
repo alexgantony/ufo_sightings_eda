@@ -13,8 +13,6 @@ for col in ["results_city", "results_state", "results_country"]:
     if col not in df.columns:
         df[col] = pd.NA
 
-# --- helpers ---------------------------------------------------------------
-
 
 def is_missing(x):
     # Robust missing check: handles None, NaN, <NA>, empty strings
@@ -23,7 +21,7 @@ def is_missing(x):
 
 ALLOWED = {"ca", "us", "au", "de", "gb"}
 
-# For Canada, mapping full province/territory names to 2-letter codes (short list).
+# For Canada Province code
 CA_NAME_TO_CODE = {
     "alberta": "ab",
     "british columbia": "bc",
@@ -72,15 +70,9 @@ def extract_subdivision_code(address: dict, country_code: str):
         name = (address.get("state") or "").strip().lower()
         return CA_NAME_TO_CODE.get(name)
 
-    # For the US, if ISO keys are missing, you'd need a full name->code map (50 entries).
-    # We skip that to keep this script compact.
     return None
 
 
-# --- select rows to process ------------------------------------------------
-
-# You said both state & country are missing; target rows with missing results_country.
-# (If you want to require BOTH missing in the *original* columns, change the mask accordingly.)
 need_mask = df["results_country"].apply(is_missing)
 
 total = int(need_mask.sum())
@@ -88,7 +80,7 @@ print(f"Rows needing reverse geocode for country: {total}")
 
 processed = 0
 
-# --- main loop -------------------------------------------------------------
+
 for idx, row in df.loc[need_mask].iterrows():
     lat, lon = row.get("latitude"), row.get("longitude")
 
@@ -97,7 +89,7 @@ for idx, row in df.loc[need_mask].iterrows():
         df.loc[idx, ["results_city", "results_state", "results_country"]] = [
             "",
             "",
-            "rof",
+            "row",
         ]
         processed += 1
         continue
@@ -132,7 +124,7 @@ for idx, row in df.loc[need_mask].iterrows():
                 else:
                     state_code = ""  # no state for AU/GB/DE
             else:
-                country_final = "rof"
+                country_final = "row"
                 state_code = ""
 
             df.loc[idx, ["results_city", "results_state", "results_country"]] = [
@@ -152,7 +144,7 @@ for idx, row in df.loc[need_mask].iterrows():
             df.loc[idx, ["results_city", "results_state", "results_country"]] = [
                 "",
                 "",
-                "rof",
+                "row",
             ]
             break
 
