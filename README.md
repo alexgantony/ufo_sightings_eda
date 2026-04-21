@@ -52,7 +52,7 @@ This project explores over 80,000 UFO sighting records collected between 1949 an
 | Property | Detail |
 |---|---|
 | Records | 80,332 raw → 80,022 after cleaning |
-| Time period | 1906–2014 (analysis focused on 1949–2014) |
+| Time period | 1906-2014 (analysis focused on 1949-2014) |
 | Countries | USA, Canada, Great Britain, Australia, Germany + Rest of World |
 | Key columns | datetime, city, state, country, shape, duration, comments |
 
@@ -60,14 +60,10 @@ This project explores over 80,000 UFO sighting records collected between 1949 an
 
 ## Key Findings
 
-- **Reporting exploded after 1995** — sightings increased nearly 10x by the early
-  2010s, driven by the internet lowering the barrier to file reports.
-- **Reporting lag dropped sharply after 1990** — pre-internet witnesses waited
-  thousands of days to report; by the 2000s most reports were filed within weeks.
-- **Summer dominates** — July, June, and August consistently account for the most
-  sightings across every decade, reflecting outdoor leisure behavior.
-- **"Disk" gave way to "light"** — the culturally iconic flying saucer shape
-  dominated pre-1990s reports but has been overtaken by ambiguous light-based sightings.
+- **Reporting exploded after 1995** - sightings increased nearly 10x by the early 2010s, driven by the internet lowering the barrier to file reports.
+- **Reporting lag dropped sharply after 1990** - pre-internet witnesses waited thousands of days to report; by the 2000s most reports were filed within weeks.
+- **Summer dominates** - July, June, and August consistently account for the most sightings across every decade, reflecting outdoor leisure behavior.
+- **"Disk" gave way to "light"** - The culturally iconic flying saucer shape dominated pre-1990s reports but has been overtaken by ambiguous light-based sightings.
 
 ---
 
